@@ -23,6 +23,7 @@ public extension KeyboardLocale {
         case .cherokee: return "🏳️"
         case .croatian: return "🇭🇷"
         case .czech: return "🇨🇿"
+        case .chinese_simplified: return "🇨🇳"
         case .danish: return "🇩🇰"
             
         case .dutch: return "🇳🇱"
