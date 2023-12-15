@@ -24,6 +24,7 @@ public extension Keyboard.ReturnKeyType {
         case .search: return false
         case .send: return true
         case .custom: return true
+        case .confirm: return true
         }
     }
 }

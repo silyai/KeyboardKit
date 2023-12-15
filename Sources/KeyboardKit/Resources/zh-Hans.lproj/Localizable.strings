@@ -20,6 +20,7 @@
 "search" = "搜索";
 "send" = "发送";
 "space" = "空格";
+"confirm" = "确认";
 
 "keyboardTypeAlphabetic" = "ABC";
 "keyboardTypeNumeric" = "123";

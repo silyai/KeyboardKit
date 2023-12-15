@@ -64,6 +64,9 @@ public extension Keyboard {
         /// A send key (used when typing in WeChat, QQ, etc.).
         case send
         
+        /// TODO: A confirm key (used when typing in to Mark.).
+        case confirm
+        
         /// A custom key with a custom title.
         case custom(title: String)
         
@@ -94,6 +97,7 @@ public extension Keyboard.ReturnKeyType {
         case .route: return "route"
         case .search: return "search"
         case .send: return "send"
+        case .confirm: return "confirm"
         case .custom(let title): return title
         }
     }
@@ -131,6 +135,7 @@ public extension Keyboard.ReturnKeyType {
         case .ok: return KKL10n.ok.text(for: locale)
         case .search: return KKL10n.search.text(for: locale)
         case .send: return KKL10n.send.text(for: locale)
+        case .confirm: return KKL10n.send.text(for: locale)
         }
     }
 }

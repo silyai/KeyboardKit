@@ -161,6 +161,7 @@ open class BaseKeyboardLayoutProvider: KeyboardLayoutProvider {
     /// The return action to use for the provided context.
     open func keyboardReturnAction(for context: KeyboardContext) -> KeyboardAction {
         #if os(iOS) || os(tvOS)
+        if context.showComfirm { return .primary(.confirm) }
         let proxy = context.textDocumentProxy
         let returnType = proxy.returnKeyType?.keyboardReturnKeyType
         if let returnType { return .primary(returnType) }

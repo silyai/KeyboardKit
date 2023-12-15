@@ -91,7 +91,11 @@ public class KeyboardContext: ObservableObject {
 
     /// The keyboard type that is currently used.
     @Published
-    public var keyboardType = Keyboard.KeyboardType.alphabetic(.lowercased)
+    public var keyboardType = Keyboard.KeyboardType.alphabetic(.lowercased) {
+        didSet {
+            
+        }
+    }
 
     /// The locale that is currently being used.
     @Published
@@ -154,6 +158,9 @@ public class KeyboardContext: ObservableObject {
     @Published
     public var traitCollection = UITraitCollection()
     #endif
+    
+    @Published
+    public var showComfirm = false
 }
 
 
