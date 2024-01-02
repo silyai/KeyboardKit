@@ -93,9 +93,13 @@ public class KeyboardContext: ObservableObject {
     @Published
     public var keyboardType = Keyboard.KeyboardType.alphabetic(.lowercased) {
         didSet {
-            
+            if case .alphabetic(let keboardCase) = keyboardType {
+                self.keboardCase = keboardCase
+            }
         }
     }
+    
+    public var keboardCase = Keyboard.Case.lowercased
 
     /// The locale that is currently being used.
     @Published
@@ -257,6 +261,10 @@ public extension KeyboardContext {
     /// Set ``keyboardType`` to the provided type.
     func setKeyboardType(_ type: Keyboard.KeyboardType) {
         keyboardType = type
+    }
+    
+    func setAlphabeticKeyboadType() {
+        keyboardType = .alphabetic(keboardCase)
     }
 
     /// Set ``locale`` to the provided locale.
